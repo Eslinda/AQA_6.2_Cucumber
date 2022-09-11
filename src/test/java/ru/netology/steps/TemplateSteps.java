@@ -1,7 +1,5 @@
 package ru.netology.steps;
 
-import com.codeborne.selenide.Selenide;
-import io.cucumber.java.Before;
 import io.cucumber.java.ru.И;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Пусть;
@@ -10,24 +8,13 @@ import org.junit.jupiter.api.Assertions;
 import ru.netology.data.DataHelper;
 import ru.netology.page.DashboardPage;
 import ru.netology.page.LoginPage;
-import ru.netology.page.TransferMoneyPage;
 import ru.netology.page.VerificationPage;
-
-import static com.codeborne.selenide.Selenide.open;
-
 
 public class TemplateSteps {
 
     private static LoginPage loginPage;
     private static DashboardPage dashboardPage;
     private static VerificationPage verificationPage;
-
-    private static TransferMoneyPage transferMoneyPage;
-
-    @Before
-    public void setUp() {
-        open("http://localhost:9999");
-    }
 
     @Пусть("пользователь залогинен с именем {string} и паролем {string}")
     public void loginWithNameAndPassword(String login, String password) {
