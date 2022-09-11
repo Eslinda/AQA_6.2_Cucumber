@@ -34,7 +34,7 @@ public class DashboardPage {
         return Integer.parseInt(value);
     }
 
-    public void verifyIsDashboardPage(){
+    public void verifyIsDashboardPage() {
         heading.shouldBe(visible);
     }
 }
