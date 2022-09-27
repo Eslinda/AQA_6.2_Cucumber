@@ -19,11 +19,8 @@ public class DashboardPage {
         return new TransferMoneyPage();
     }
 
-    public int getCardBalance(String id) {
-        int idN = Integer.valueOf(id);
-        idN = idN - 1;
-        String idS = String.valueOf(idN);
-        var text = cards.get(Integer.parseInt(idS)).text();
+    public int getCardBalance(int id) {
+        var text = cards.get(id).text();
         return extractBalance(text);
     }
 
